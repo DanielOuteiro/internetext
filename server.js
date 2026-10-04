@@ -2,7 +2,7 @@ import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { listAll, render, warmable } from './lib/registry.js';
+import { listCatalog, render, warmable } from './lib/registry.js';
 
 const PORT = +(process.env.PORT || 8888);
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), 'public');
@@ -20,7 +20,7 @@ http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://x');
   try {
     if (url.pathname === '/api/pages') {
-      return json(res, 200, await listAll());
+      return json(res, 200, listCatalog());
     }
     const m = url.pathname.match(/^\/api\/page\/(\d{3})$/);
     if (m) {
@@ -40,5 +40,5 @@ http.createServer(async (req, res) => {
 }).listen(PORT, () => {
   console.log(`Internetext on http://localhost:${PORT}`);
   // Warm the cache sequentially so first views are instant without tripping rate limits.
-  (async () => { for (const n of warmable()) await render(n); await listAll(); })();
+  (async () => { for (const n of warmable()) await render(n); })();
 });

@@ -12,6 +12,17 @@ npm start
 
 Open [http://localhost:8888](http://localhost:8888). Node 20+. `PORT` defaults to 8888.
 
+## Netlify
+
+No keys. Form fields:
+
+- Base directory: empty
+- Build command: empty (`netlify.toml` runs `true`)
+- Publish directory: `public`
+- Functions directory: `netlify/functions`
+
+Custom domain: `internetext.com` → the Netlify site.
+
 ## Controls
 
 - Type 3 digits to open a page
