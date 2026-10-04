@@ -34,22 +34,22 @@ Custom domain: `internetext.com` → the Netlify site.
 
 ## Pages
 
-About 570 live pages, numbered 100–899.
+About 630 live pages, numbered 100–899.
 
 | Range | Content |
 | --- | --- |
 | 100, 199 | Index and A–Z directory |
-| 1xx | Headlines, Wikipedia, Hacker News |
-| 2xx | Bundesliga, F1 drivers and races |
+| 1xx | Headlines, Wikipedia, Hacker News, BBC/DW/Al Jazeera/Guardian RSS |
+| 2xx | World football (PL, La Liga, Serie A, Ligue 1, UCL, MLS…), F1, Bundesliga |
 | 3xx | Currencies, crypto, power prices |
-| 4xx | Weather, air quality, earthquakes |
-| 5xx | Launches, ISS, space weather |
-| 6xx | Public status pages |
-| 7xx–8xx | One page per country |
+| 4xx | Weather, pollen, sea state, rivers, air quality, earthquakes |
+| 5xx | Launches, ISS, flights, MLB, NHL, 2026 in sports |
+| 6xx | Status, US alerts, disasters, EONET, Met, books, Lichess, GBIF |
+| 7xx–8xx | World stats, clocks, holidays, one page per country |
 
 ## Sources
 
-All public, no keys: Wikipedia, Hacker News, OpenLigaDB, Jolpica F1, Frankfurter/ECB, CoinGecko, Energy-Charts, Open-Meteo, USGS, Launch Library 2, NOAA SWPC, World Bank, Nager.Date, mledoze/countries.
+All public, no private keys: Wikipedia, BBC/DW/Al Jazeera/Guardian RSS, Hacker News, OpenLigaDB, TheSportsDB (documented free key 123), MLB StatsAPI, NHL api-web, Jolpica F1, Frankfurter/ECB, CoinGecko, Energy-Charts, Open-Meteo, NWS, USGS, GDACS, NASA EONET, OpenSky, Launch Library 2, NOAA SWPC, World Bank, Nager.Date, Met Museum, Open Library, MusicBrainz, Lichess, GBIF, openFDA, mledoze/countries.
 
 ## License
 
