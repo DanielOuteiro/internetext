@@ -10,9 +10,7 @@ Site: [internetext.com](https://internetext.com)
 npm start
 ```
 
-Open [http://localhost:8888](http://localhost:8888). Node 20+.
-
-Optional: `HOME_NAME`, `HOME_LAT`, `HOME_LON` set the local forecast on page 402. `PORT` defaults to 8888.
+Open [http://localhost:8888](http://localhost:8888). Node 20+. `PORT` defaults to 8888.
 
 ## Controls
 
