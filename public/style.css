@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Bedstead';
+  src: url('/fonts/bedstead.otf') format('opentype');
+  font-display: block;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #050505;
+  color: #fff;
+  font-family: 'Bedstead', ui-monospace, monospace;
+  overscroll-behavior: none;
+}
+
+main {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+}
+
+.tv {
+  position: relative;
+  line-height: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 0 10px #151515, 0 0 0 11px #2a2a2a, 0 30px 80px rgba(0, 0, 0, .8);
+}
+
+canvas { display: block; image-rendering: pixelated; touch-action: manipulation; }
+
+.crt {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, .22) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 60%, rgba(0, 0, 0, .45) 100%);
+  mix-blend-mode: multiply;
+}
+
+.remote {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  user-select: none;
+}
+
+.remote > div { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+
+.remote button {
+  font: inherit;
+  font-size: 14px;
+  min-width: 36px;
+  height: 32px;
+  padding: 0 8px;
+  color: #ddd;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform .08s ease-out, background-color .15s;
+}
+
+.remote button:hover { background: #262626; }
+.remote button:active { transform: scale(.94); }
+.remote button[aria-pressed="true"] { background: #fff; color: #000; }
+
+.fast button { min-width: 64px; color: #000; font-size: 12px; border: 0; }
+.fast .red { background: #f00; }
+.fast .green { background: #0f0; }
+.fast .yellow { background: #ff0; }
+.fast .cyan { background: #0ff; }
+.fast button:hover { filter: brightness(1.15); }
+
+@media (max-width: 520px) {
+  .remote button { height: 40px; min-width: 40px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remote button { transition: none; }
+}

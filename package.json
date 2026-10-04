@@ -1,0 +1,15 @@
+{
+  "name": "internetext",
+  "version": "1.0.0",
+  "description": "Live teletext for the internet. Open sources only, no API keys.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
